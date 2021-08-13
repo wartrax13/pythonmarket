@@ -25,11 +25,11 @@
           <a class="nav-link active" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Contato</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Opções
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -46,7 +46,7 @@
     </div>
   </div>
 </nav>
-<!-- FIM NAVBAR-->
+<!--FIM NAVBAR-->
 
 <div id="header">
     <a href="#" class="logo">Loja de Artigos variados</a>
@@ -55,13 +55,13 @@
     <div class="cart">
         {% with total_items=cart|length %}
         {% if total_items > 0 %}
-            Your cart:
+            Seu carrinho:
         <a href="{% url 'cart:cart_detail' %}">
-           {{ total_items }} item{{ total_items|pluralize }},
-           ${{ cart.get_total_price }}
+           {{ total_items }} produto{{ total_items|pluralize }},
+           R${{ cart.get_total_price }}
         </a>
         {% else %}
-        Your cart is empty.
+        Seu carrinho está vazio.
         {% endif %}
         {% endwith %}
     </div>
