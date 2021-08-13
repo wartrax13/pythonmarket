@@ -14,4 +14,3 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['available', 'created', 'updated']
     list_editable = ['price', 'available']  # o que pode ser editado na lista
     prepopulated_fields = {'slug': ('name',)}  # para gerar slugs
-
