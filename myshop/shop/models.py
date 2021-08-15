@@ -28,6 +28,7 @@ class Product(models.Model):
     available = models.BooleanField(default=True)  # está ou não disponível
     created = models.DateTimeField(auto_now_add=True)  # quando foi criado
     updated = models.DateTimeField(auto_now=True)  # quando foi atualizado pela última vez
+    estoque = models.IntegerField(default=0)
 
     class Meta:  # para consultar os produtos por id e slug
         ordering = ('name',)

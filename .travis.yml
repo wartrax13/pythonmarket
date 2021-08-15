@@ -3,5 +3,6 @@ python:
   - 3.6
 install:
   - pip install -r requirements-dev.txt
+  - cp contrib/env-sample .env
 script:
   - flake8
